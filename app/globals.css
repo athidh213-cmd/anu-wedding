@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ink: #22302a; --green: #2e4a3b; --deep: #1c2e24; --cream: #f5efe0; --gold: #b08a45; --olive: #6b7c4f; --red: #b4584e; }
+* { box-sizing: border-box; }
+html { background: var(--cream); }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--font-sans), sans-serif; font-size: 13px; line-height: 1.5; }
+button, input, select { font: inherit; }
+::selection { background: rgba(176, 138, 69, .22); }
+@keyframes soft-pulse { 0%, 100% { opacity: .6; transform: scale(.85); } 50% { opacity: 1; transform: scale(1); } }
+@keyframes gold-glow { 0% { background: rgba(176, 138, 69, .3); } 100% { background: transparent; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.animate-soft-pulse { animation: soft-pulse 1.8s ease-in-out infinite; }
+.animate-rise-in { animation: rise-in .55s ease-out both; }
+.new-row { animation: gold-glow 2.5s ease-out both; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
